@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="/Calculator.css">
+</head>
+<body>
+  <div class="calculator">
+    <div class="display">
+      <p class="js-calculation calculation">5</p>
+    </div>
+    <div class="buttons">
+        <button onclick="updateCalculation('1');" class="btn Number-btn"> 1 </button>
+
+        <button onclick="updateCalculation('2');" class="btn Number-btn"> 2 </button>
+
+        <button onclick="updateCalculation('3');" class="btn Number-btn"> 3 </button>
+
+        <button onclick="updateCalculation('+');" class="btn Operator-btn"> + </button>
+
+    
+
+      
+        <button onclick="updateCalculation('4');" class="btn Number-btn"> 4 </button>
+
+        <button onclick="updateCalculation('5');" class="btn Number-btn"> 5 </button>
+
+        <button onclick="updateCalculation('6');" class="btn Number-btn"> 6 </button>
+
+        <button onclick="updateCalculation('-');" class="btn Operator-btn"> - </button>
+      
+      
+      
+        <button onclick="updateCalculation('7');" class="btn Number-btn"> 7 </button>
+
+        <button onclick="updateCalculation('8');" class="btn Number-btn"> 8 </button>
+
+        <button onclick="updateCalculation('9');" class="btn Number-btn"> 9 </button>
+
+        <button onclick="updateCalculation('*');" class="btn Operator-btn"> * </button>
+      
+      
+
+      
+
+        <button onclick="updateCalculation('0');" class="btn Number-btn"> 0 </button>
+
+        <button onclick="updateCalculation('.');" class="btn Number-btn"> . </button>
+
+        <button onclick="if (calculation !== ''){
+          calculation = eval(calculation);
+          showCalculation();
+          localStorage.setItem('calculation', JSON.stringify(calculation));
+        }
+          "
+          class="btn btn-equal">
+          =
+        </button>
+
+        <button onclick="updateCalculation('/');" class="btn Operator-btn"> / </button>
+    
+
+        <button onclick="
+          calculation = '';
+          showCalculation();
+          localStorage.setItem('calculation',JSON.stringify(calculation));"
+          class="btn clear-btn"
+          >Clear</button>
+   </div>
+ </div>
+
+  <script src="Calculator.js"></script>
+  
+</body>
+</html>
